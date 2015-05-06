@@ -27,3 +27,7 @@ category_id_array = *(Category.first.id..Category.last.id)
   category_ids: [cat_id_one, cat_id_two])
 end
 
+
+10.times do User.create(name: Faker::Name.name, email: Faker::Internet.email,
+  password: Faker::Internet.password(8))
+end

@@ -1,0 +1,2 @@
+module BlagsHelper
+end

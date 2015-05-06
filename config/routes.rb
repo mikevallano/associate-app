@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :pigs
+  resources :blags
+  root to: 'visitors#index'
   resources :categories
   resources :articles
-  root to: 'visitors#index'
   devise_for :users
 end

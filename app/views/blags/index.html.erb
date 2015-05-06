@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Blags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blags.each do |blag| %>
+      <tr>
+        <td><%= blag.name %></td>
+        <td><%= link_to 'Show', blag %></td>
+        <td><%= link_to 'Edit', edit_blag_path(blag) %></td>
+        <td><%= link_to 'Destroy', blag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blag', new_blag_path %>
